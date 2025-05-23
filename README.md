@@ -17,3 +17,15 @@
 - 📊 Dataset-driven, with filtering and sorting options
 
 
+## 📸 Screenshots
+
+**🔽 Input Selection**
+![Input](./TouristRecommender/Screenshots/input.png)
+
+**📍 Recommendation Output**
+<img src="./TouristRecommender/Screenshots/output1.png" width="30%">
+<img src="./TouristRecommender/Screenshots/output2.png" width="30%">
+<img src="./TouristRecommender/Screenshots/output3.png" width="30%">
+
+
+
