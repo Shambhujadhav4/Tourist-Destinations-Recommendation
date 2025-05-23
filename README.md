@@ -24,22 +24,10 @@
 
 ## 📸 Recommendation Output
 
-<div style="display: flex; gap: 10px; justify-content: center;">
+| Output Image 1 | Output Image 2 | Output Image 3 |
+| -------------- | -------------- | -------------- |
+| <img src="./TouristRecommender/Screenshots/Output1.png" width="300"/> | <img src="./TouristRecommender/Screenshots/Output2.png" width="300"/> | <img src="./TouristRecommender/Screenshots/Output3.png" width="300"/> |
 
-  <figure style="text-align: center;">
-    <img src="./TouristRecommender/Screenshots/Output1.png" width="200" />
-    <figcaption>Output Image 1</figcaption>
-  </figure>
-
-  <figure style="text-align: center;">
-    <img src="./TouristRecommender/Screenshots/Output2.png" width="200" />
-    <figcaption>Output Image 2</figcaption>
-  </figure>
-
-  <figure style="text-align: center;">
-    <img src="./TouristRecommender/Screenshots/Output3.png" width="200" />
-    <figcaption>Output Image 3</figcaption>
-  </figure>
 
 </div>
 
