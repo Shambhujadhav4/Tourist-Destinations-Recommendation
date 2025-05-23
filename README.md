@@ -20,12 +20,12 @@
 ## 📸 Screenshots
 
 **🔽 Input Selection**
-![Input](./TouristRecommender/Screenshots/input.png)
+![Input](./TouristRecommender/Screenshots/Input.png)
 
 **📍 Recommendation Output**
-<img src="./TouristRecommender/Screenshots/output1.png" width="30%">
-<img src="./TouristRecommender/Screenshots/output2.png" width="30%">
-<img src="./TouristRecommender/Screenshots/output3.png" width="30%">
+<img src="./TouristRecommender/Screenshots/Output1.png" width="30%">
+<img src="./TouristRecommender/Screenshots/Output2.png" width="30%">
+<img src="./TouristRecommender/Screenshots/Output3.png" width="30%">
 
 
 
