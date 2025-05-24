@@ -4,8 +4,8 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.neighbors import NearestNeighbors
 
 # Load the dataset
-df = pd.read_csv("TouristRecommender/Tourist.csv")
-d = pd.read_csv("TouristRecommender/Tourist5.csv")
+df = pd.read_csv("Tourist.csv")
+d = pd.read_csv("Tourist5.csv")
 
 # Encoded City and Category
 le_city = LabelEncoder()
