@@ -4,10 +4,10 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.neighbors import NearestNeighbors
 
 # Load the dataset
-df = pd.read_csv("TouristRecommender/Touristnew.csv")
+df = pd.read_csv("TouristRecommender/Tourist.csv")
 d = pd.read_csv("TouristRecommender/Tourist5.csv")
 
-# Encoded City and Category
+# Encode City and Category
 le_city = LabelEncoder()
 le_cat = LabelEncoder()
 df['City_encoded'] = le_city.fit_transform(df['City'])
@@ -19,39 +19,27 @@ st.write("Select your preferences:")
 
 city = st.selectbox("Choose City", df["City"].unique())
 category = st.selectbox("Choose Category", df["Category"].unique())
-rating_filter = st.selectbox("Filter by Rating", ["All", "Above 4", "Below 4"])
 
 if st.button("Recommend"):
     # Filter by city and category
     filtered_df = df[(df["City"] == city) & (df["Category"] == category)].copy()
 
-    # Apply rating filter
-    if rating_filter == "Above 4":
-        filtered_df = filtered_df[filtered_df["Ratings_x"] >= 4.0]
-    elif rating_filter == "Below 4":
-        filtered_df = filtered_df[filtered_df["Ratings_x"] < 4.0]
-
     if filtered_df.empty:
         st.warning("No places match your criteria.")
     else:
-        
-        #  Display all city images
+        # Display all city images
         city_images = d[d["City"] == city]
 
         if not city_images.empty:
             st.subheader(f"📸 Images of {city}:")
-    # Filter all columns starting with 'url'
             url_columns = [col for col in city_images.columns if col.lower().startswith("url")]
-    
-    # Collect valid image URLs
             image_urls = []
             for col in url_columns:
                 urls = city_images[col].dropna().tolist()
                 image_urls.extend([u for u in urls if isinstance(u, str) and u.startswith("http")])
-    
-    # Display images
+
             if image_urls:
-                cols = st.columns(min(len(image_urls), 3))  # Max 4 images per row
+                cols = st.columns(min(len(image_urls), 3))
                 for i, url in enumerate(image_urls):
                     with cols[i % len(cols)]:
                         st.image(url, use_container_width=True)
@@ -82,11 +70,12 @@ if st.button("Recommend"):
         # Get recommendations
         _, indices = knn.kneighbors(input_vec)
 
-        st.subheader("Recommended Places:")
+        # Sort recommendations by rating
+        recommended_places = filtered_df.iloc[indices[0]].sort_values(by='Ratings_x', ascending=False)
 
-        # Loop inside the button block
-        for idx in indices[0]:
-            place = filtered_df.iloc[idx]
+        st.subheader("Recommended Places (Highest Rated First):")
+
+        for _, place in recommended_places.iterrows():
             st.write(f"### 🏞️ {place['Place']}")
             st.write(f"**Description:** {place['Place_desc']}")
             st.write(f"**Rating:** ⭐ {place['Ratings_x']}")
