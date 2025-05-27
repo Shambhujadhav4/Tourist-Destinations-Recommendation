@@ -75,9 +75,10 @@ if st.button("Recommend"):
 
         st.subheader("Recommended Places (Highest Rated First):")
 
-        for _, place in recommended_places.iterrows():
-            st.write(f"### 🏞️ {place['Place']}")
+        for i, (_, place) in enumerate(recommended_places.iterrows(), start=1):
+            st.write(f"### {i}. 🏞️ {place['Place']}")
             st.write(f"**Description:** {place['Place_desc']}")
             st.write(f"**Rating:** ⭐ {place['Ratings_x']}")
             st.write(f"**Best Time to Visit:** {place['Best_time_to_visit']}")
             st.markdown("---")
+
