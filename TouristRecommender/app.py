@@ -5,36 +5,53 @@ from sklearn.neighbors import NearestNeighbors
 
 # Page config and styling
 st.set_page_config(page_title="Tourist Recommender", page_icon="🏝️", layout="wide")
+
 st.markdown("""
 <style>
-    .main {background-color: #f5f7fa;}
+    /* Common styles */
     .stApp {max-width: 1200px; margin: auto;}
+    
+    /* Card styles */
     .card {
-        background-color: #1c2b3a;
+        background-color: var(--background-color);
         padding: 1.5rem;
         margin-bottom: 1.5rem;
         border-radius: 1rem;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-        border-left: 5px solid #00bfff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        border-left: 5px solid #4CAF50;
         transition: transform 0.3s;
     }
+    
+    /* Dark mode overrides */
+    [data-theme="dark"] .card {
+        background-color: #2d3748;
+    }
+    
+    /* Card hover effects */
     .card:hover {
         transform: scale(1.01);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
-    .rating {
-        color: #ffd700;
-        font-weight: bold;
-        font-size: 1.2rem;
-    }
+    
+    /* Text styles */
     h1, h2, h3 {
-        color: #ffffff !important;
+        color: inherit !important;
     }
+    
     p {
-        color: #ffffff !important;
+        color: inherit !important;
         font-size: 1rem;
         line-height: 1.6;
     }
+    
+    /* Rating styles */
+    .rating {
+        color: #ff9800;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    
+    /* Image styles */
     .image-card img {
         border-radius: 10px;
         box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
