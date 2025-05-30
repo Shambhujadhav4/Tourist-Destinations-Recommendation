@@ -29,6 +29,7 @@
 | <img src="./TouristRecommender/Screenshots/Output1.png" width="300"/> | <img src="./TouristRecommender/Screenshots/Output2.png" width="300"/> | <img src="./TouristRecommender/Screenshots/Output3.png" width="300"/> |
 
 </div>
+
 ### 🎥 Live Demo GIF
 
 ![Demo GIF](./TouristRecommender/Screenshots/demo.gif)
