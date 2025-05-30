@@ -55,6 +55,12 @@ Please make sure your code follows the existing style and includes comments wher
 Feel free to open issues for any bugs or feature requests!
 
 
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).  
+You are free to use, modify, and distribute this project with proper attribution.
+
+
 
 
 
