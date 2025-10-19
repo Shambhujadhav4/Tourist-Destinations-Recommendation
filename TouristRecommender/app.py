@@ -176,7 +176,7 @@ def load_data():
     # try loading dataset from expected path
     try:
         df = pd.read_csv("TouristRecommender/Touristnew.csv")
-        d = pd.read_csv("Tourist5.csv")
+        d = pd.read_csv("TouristRecommender/Tourist5.csv")
     except Exception as e:
         # If failing, return None to let UI show fallback message
         return None, None
