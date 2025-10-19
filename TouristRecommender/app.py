@@ -12,7 +12,12 @@ st.set_page_config(
     page_title="Smart Tourist Recommender",
     page_icon="🧭",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': None,
+        'Report a bug': None,
+        'About': "Smart Tourist Destination Recommender - Find your perfect travel destination!"
+    }
 )
 
 # ---------------------------
@@ -35,9 +40,9 @@ st.markdown(
     }
     
     .stApp {
-        background: var(--light-bg) !important;
+        background: var(--dark-bg) !important;
         font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-        color: var(--text-light) !important;
+        color: var(--text-dark) !important;
     }
     
     .hero {
@@ -58,21 +63,21 @@ st.markdown(
     .hero p { margin-top: 6px !important; opacity: 0.95 !important; }
 
     .place-card {
-        background: var(--card-light) !important;
+        background: var(--card-dark) !important;
         border-radius: 12px !important;
         overflow: hidden !important;
         box-shadow: 0 6px 18px rgba(16,24,40,0.06) !important;
         transition: transform 0.18s ease !important;
-        border: 1px solid rgba(16,24,40,0.04) !important;
+        border: 1px solid rgba(255,255,255,0.04) !important;
         margin-bottom: 20px !important;
-        color: var(--text-light) !important;
+        color: var(--text-dark) !important;
     }
     
     .place-card:hover { transform: translateY(-6px) !important; }
     .place-card .img { width: 100% !important; height: 180px !important; object-fit: cover !important; }
     .place-card .body { padding: 14px !important; }
-    .place-card h3 { margin: 0 0 6px 0 !important; font-size: 1.05rem !important; color: var(--text-light) !important; }
-    .place-card p { margin: 0 !important; color: var(--text-muted-light) !important; font-size: 0.92rem !important; line-height: 1.4 !important; }
+    .place-card h3 { margin: 0 0 6px 0 !important; font-size: 1.05rem !important; color: var(--text-dark) !important; }
+    .place-card p { margin: 0 !important; color: #cbd5e1 !important; font-size: 0.92rem !important; line-height: 1.4 !important; }
 
     .btn {
         display: inline-block !important;
@@ -108,16 +113,6 @@ st.markdown(
     
     .stButton > button:hover { transform: translateY(-2px) !important; }
     
-    /* Dark theme - only when needed */
-    @media (prefers-color-scheme: dark) {
-        .stApp { background: var(--dark-bg) !important; color: var(--text-dark) !important; }
-        .place-card { background: var(--card-dark) !important; color: var(--text-dark) !important; border-color: rgba(255,255,255,0.04) !important; }
-        .place-card h3 { color: var(--text-dark) !important; }
-        .place-card p { color: #cbd5e1 !important; }
-        .muted { color: var(--text-muted-dark) !important; }
-        .rating { color: #fbbf24 !important; }
-    }
-    
     /* Auto-scroll to top functionality */
     html {
         scroll-behavior: smooth;
@@ -131,6 +126,118 @@ st.markdown(
         width: 1px;
         height: 1px;
         visibility: hidden;
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        /* Main app adjustments */
+        .stApp {
+            padding: 0.5rem !important;
+        }
+        
+        /* Hero section mobile */
+        .hero {
+            padding: 20px !important;
+            margin-bottom: 15px !important;
+            border-radius: 10px !important;
+        }
+        
+        .hero h1 {
+            font-size: 1.8rem !important;
+            margin-bottom: 8px !important;
+        }
+        
+        .hero p {
+            font-size: 1rem !important;
+        }
+        
+        /* Cards mobile optimization */
+        .place-card {
+            margin-bottom: 15px !important;
+            border-radius: 10px !important;
+        }
+        
+        .place-card .img {
+            height: 160px !important;
+        }
+        
+        .place-card .body {
+            padding: 12px !important;
+        }
+        
+        .place-card h3 {
+            font-size: 1rem !important;
+            margin-bottom: 8px !important;
+        }
+        
+        .place-card p {
+            font-size: 0.9rem !important;
+            line-height: 1.3 !important;
+        }
+        
+        /* Button adjustments */
+        .btn {
+            padding: 6px 10px !important;
+            font-size: 0.9rem !important;
+            margin-right: 6px !important;
+            margin-bottom: 4px !important;
+        }
+        
+        /* Sidebar mobile */
+        .css-1d391kg {
+            padding: 1rem !important;
+        }
+        
+        /* Streamlit specific mobile fixes */
+        .stSelectbox > div > div {
+            font-size: 0.9rem !important;
+        }
+        
+        .stSlider > div > div {
+            font-size: 0.9rem !important;
+        }
+        
+        .stTextInput > div > div > input {
+            font-size: 0.9rem !important;
+        }
+        
+        /* Metrics mobile */
+        .metric-container {
+            padding: 0.5rem !important;
+        }
+        
+        .metric-container h3 {
+            font-size: 1.1rem !important;
+        }
+        
+        /* Grid adjustments for mobile */
+        .stContainer {
+            padding: 0.5rem !important;
+        }
+    }
+    
+    /* Extra small mobile devices */
+    @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 1.5rem !important;
+        }
+        
+        .place-card .img {
+            height: 140px !important;
+        }
+        
+        .place-card h3 {
+            font-size: 0.95rem !important;
+        }
+        
+        .place-card p {
+            font-size: 0.85rem !important;
+        }
+        
+        .btn {
+            padding: 5px 8px !important;
+            font-size: 0.85rem !important;
+        }
     }
     </style>
     
@@ -282,66 +389,6 @@ with st.sidebar:
     st.markdown(f"### 👋 Hello, {st.session_state.user_name}")
     st.markdown("Plan your next trip — fast and pretty ✨")
     st.divider()
-
-    # Theme toggle (enhanced with system detection)
-    st.markdown("#### 🎨 Theme Settings")
-    theme = st.radio("Theme Preference", options=["🌞 Light", "🌙 Dark", "🔄 Auto (System)"], index=2)
-    
-    if theme == "🌙 Dark":
-        st.markdown(
-            """<style> 
-                .stApp { 
-                    background: linear-gradient(180deg,#0f172a 0%, #071033 60%) !important; 
-                    color: #e6eef8 !important; 
-                } 
-                .place-card { 
-                    background: #0b1220 !important; 
-                    color: #e6eef8 !important; 
-                    border: 1px solid rgba(255,255,255,0.04) !important; 
-                }
-                .place-card h3 { color: #e6eef8 !important; }
-                .place-card p { color: #cbd5e1 !important; }
-                .hero { color: white !important; }
-                .hero h1 { color: white !important; }
-                .hero p { color: white !important; }
-                .muted { color: #94a3b8 !important; }
-                .rating { color: #fbbf24 !important; }
-                .css-1d391kg {
-                    background: rgba(11, 18, 32, 0.9) !important;
-                    border: 1px solid rgba(255,255,255,0.1) !important;
-                }
-            </style>""",
-            unsafe_allow_html=True,
-        )
-    elif theme == "🌞 Light":
-        st.markdown(
-            """<style> 
-                .stApp { 
-                    background: linear-gradient(180deg, #f6f9ff 0%, #ffffff 40%) !important; 
-                    color: #111827 !important; 
-                } 
-                .place-card { 
-                    background: linear-gradient(180deg, #ffffff, #fbfdff) !important; 
-                    color: #111827 !important; 
-                    border: 1px solid rgba(16,24,40,0.04) !important; 
-                }
-                .place-card h3 { color: #111827 !important; }
-                .place-card p { color: #4b5563 !important; }
-                .hero { color: white !important; }
-                .hero h1 { color: white !important; }
-                .hero p { color: white !important; }
-                .muted { color: #6b7280 !important; }
-                .rating { color: #b45309 !important; }
-                .css-1d391kg {
-                    background: rgba(255, 255, 255, 0.9) !important;
-                    border: 1px solid rgba(16,24,40,0.1) !important;
-                }
-            </style>""",
-            unsafe_allow_html=True,
-        )
-    # Auto theme uses the CSS media queries defined above
-
-    st.divider()
     # Quick search & filters
     st.markdown("#### 🔎 Quick search")
     search_text = st.text_input("Search place / city / category", value="", placeholder="e.g. Goa, Beaches")
@@ -452,8 +499,9 @@ def get_place_image(place_name, city_name):
     # Fallback: placeholder image
     return placeholder_images(1)[0]
 
-# Number of columns for cards (responsive-ish)
-cols_num = 3
+# Number of columns for cards (responsive)
+# Streamlit will automatically adjust columns based on screen size
+cols_num = 3  # Default for desktop, Streamlit handles mobile responsiveness
 cards = st.container()
 
 # Limit results for better performance
