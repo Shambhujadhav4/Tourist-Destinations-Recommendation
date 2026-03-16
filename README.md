@@ -5,7 +5,7 @@
 
 🌍 **Discover travel destinations** personalized just for you using a smart recommendation system. Just select a city and category, and get personalized suggestions in seconds!
 
-🔗 **Live Demo**: [tourist-destinations-recommendation.streamlit.app](https://tourist-destinations-recommendation.streamlit.app/)
+🔗 **Live Demo**: [tourist-destinations-recommendation.streamlit.app](https://destinamatch.streamlit.app/)
 
 
 ## ✨ Features
