@@ -14,14 +14,14 @@ import base64
 # Page config
 # ---------------------------
 st.set_page_config(
-    page_title="Smart Tourist Recommender",
+    page_title="DestinaMatch",
     page_icon="🧭",
     layout="wide",
     initial_sidebar_state="collapsed",
     menu_items={
         'Get Help': None,
         'Report a bug': None,
-        'About': "Smart Tourist Destination Recommender - Find your perfect travel destination!"
+        'About': "DestinaMatch - Find your perfect travel destination!"
     }
 )
 
@@ -33,7 +33,7 @@ st.markdown(
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;500;700&display=swap');
 
-    /* --- Horizon Atlas: Travel-magazine Theme --- */
+    /* --- DestinaMatch: Travel-magazine Theme --- */
     :root {
         --brand-teal: #2a9d8f;
         --brand-coral: #e76f51;
@@ -1154,7 +1154,7 @@ if st.session_state.user_name is None:
             <div class="welcome-hero">
                 <span class="welcome-kicker">Smart destination discovery</span>
                 <h1>Find places that actually match your travel style.</h1>
-                <p>Horizon Atlas helps you explore better destinations faster with focused recommendations, filters that make sense, and a shortlist you can actually use.</p>
+                <p>DestinaMatch helps you explore better destinations faster with focused recommendations, filters that make sense, and a shortlist you can actually use.</p>
                 <div class="welcome-highlights">
                     <div class="welcome-highlight">
                         <strong>Personalized picks</strong>
@@ -1365,7 +1365,7 @@ st.markdown(
     """
     <div class="header-nav">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-            <h1>🧭 Horizon Atlas</h1>
+            <h1>🧭 DestinaMatch</h1>
             <div style="font-size: 0.9rem; color: #61584b;">Filter smart. Explore better.</div>
         </div>
     </div>
@@ -1680,7 +1680,7 @@ st.markdown(
     </div>
     <div style="background: linear-gradient(130deg, #fff9ee, #f9f0df); padding: 22px; border-radius: 12px; border: 1px solid #d8ccb6; margin-top: 24px; text-align: center; box-shadow: 0 8px 24px rgba(118, 95, 62, 0.08);">
         <p style="color: #61584b; margin: 0; font-size: 0.9rem;">
-            Built with ❤️ by <strong style="color: #e76f51;">Shambhuraje Jadhav</strong> · Horizon Atlas Edition
+            Built with ❤️ by <strong style="color: #e76f51;">Shambhuraje Jadhav</strong> · DestinaMatch Edition
         </p>
         <p style="color: #7a705e; margin: 8px 0 0 0; font-size: 0.85rem;">
             Save places, refine quickly, and choose better destinations in one flow.
